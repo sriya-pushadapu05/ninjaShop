@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Ecommerce Automation Suite]">
+  <listeners>
+    <listener class-name="com.srm.listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Ecommerce Tests(failed)">
+    <classes>
+      <class name="com.srm.tests.CheckoutTest">
+        <methods>
+          <include name="checkoutTest"/>
+          <include name="tearDown"/>
+          <include name="checkoutWithoutLoginTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.srm.tests.CheckoutTest -->
+      <class name="com.srm.tests.ValidationTest">
+        <methods>
+          <include name="invalidEmailTest"/>
+          <include name="tearDown"/>
+          <include name="emptyFieldValidationTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.srm.tests.ValidationTest -->
+      <class name="com.srm.tests.LoginTest">
+        <methods>
+          <include name="loginTest" invocation-numbers="1"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.srm.tests.LoginTest -->
+    </classes>
+  </test> <!-- Ecommerce Tests(failed) -->
+</suite> <!-- Failed suite [Ecommerce Automation Suite] -->
